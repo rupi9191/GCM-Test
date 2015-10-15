@@ -1,0 +1,10 @@
+<h1>Test GCM Push Notification</h1>
+<%= form_tag(action: "sendNotification",method: "post") do %>
+  <%= label_tag(:q, "API key:") %>
+  <%= text_field_tag(:apikey) %><br><br>
+  <%= label_tag(:q, "Reg Id: ") %>
+  <%= text_field_tag(:regid) %><br><br>
+  <%= label_tag(:q, "Message:") %>
+  <%= text_field_tag(:message) %><br>
+  <%= submit_tag("Send") %>
+<% end %>

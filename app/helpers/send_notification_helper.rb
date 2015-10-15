@@ -1,0 +1,2 @@
+module SendNotificationHelper
+end

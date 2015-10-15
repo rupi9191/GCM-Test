@@ -1,0 +1,17 @@
+common: &common
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  host: localhost
+
+development:
+  <<: *common
+  database: em_development
+
+test:
+  <<: *common
+  database: em_test
+
+production:
+  <<: *common
+  database: em_production
