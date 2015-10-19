@@ -2,9 +2,15 @@
 <%= form_tag(action: "sendNotification",method: "post") do %>
   <%= label_tag(:q, "API key:") %>
   <%= text_field_tag(:apikey) %><br><br>
-  <%= label_tag(:q, "Reg Id: ") %>
-  <%= text_field_tag(:regid) %><br><br>
+  <%= label_tag(:q, "Reg Id: ",:class => "regid_label") %>
+  <!-- <%= text_field_tag(:regid) %><br><br> -->
+  <%= text_area(:regid, cols: 38, rows: 15) %><br>
   <%= label_tag(:q, "Message:") %>
   <%= text_field_tag(:message) %><br>
-  <%= submit_tag("Send") %>
+  <!-- <%= text_area(:message, cols: 40, rows: 15) %><br> -->
+  <%= submit_tag("Send",:class => 'submit') %>
 <% end %>
+<p class="note">Note:</p>
+<p><b>API key</b> - Server key generated from google developer console</p>
+<p><b>RegId</b>- alias registration id which you will get once you registered your device using gcm library in mobile</p>
+<p><b>Message</b> - Message you want to send in push notification</p>
